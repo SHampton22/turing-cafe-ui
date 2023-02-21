@@ -1,6 +1,8 @@
 import React, {  useEffect, useState } from 'react';
 import { fetchReservations } from '../ApiCalls/api';
-import Resy from '../components/Resy';
+import Resy from '../components/Resy/Resy';
+import ResyForm from '../components/Form/ResyForm';
+
 import './App.css';
 
 function App()  {
@@ -12,6 +14,8 @@ function App()  {
     .catch(error => console.log(error))
   }, [])
   
+  const addResy = newResy => setReservations([...reservations, newResy])
+
    const displayReservations = reservations.map(resy => {
     return <Resy 
               key={resy.id}
@@ -26,7 +30,9 @@ function App()  {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-
+          <ResyForm 
+            addResy={addResy}
+          />
         </div>
         <div className='resy-container'>
           {displayReservations}

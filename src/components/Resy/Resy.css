@@ -1,0 +1,12 @@
+.resy-card {
+  border: 2px solid teal;
+  border-radius: 5px;
+  background-color: white;
+  color: teal;
+}
+
+.cancel-button {
+  background: teal;
+  color: white;
+  border-style: none;
+}
