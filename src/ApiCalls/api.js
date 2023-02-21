@@ -8,7 +8,7 @@ const fetchReservations = () => {
   })
 }
 
-const postReservation = () => {
+const postReservation = (data) => {
   return fetch('http://localhost:3001/api/v1/reservations', {
     method: 'POST',
     body: JSON.stringify(data),
