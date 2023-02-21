@@ -1,11 +1,19 @@
-import React, {  useEffect, useState } from 'react'
+import React, { useState } from 'react'
+// import { postReservation } from '../../ApiCalls/api'
 import './ResyForm.css'
 
 export default function ResyForm({addResy}) {
   const [name, setName] = useState('')
   const [date, setDate] = useState('')
   const [time, setTime] = useState('')
-  const [number, setNumber] = useState(null)
+  const [number, setNumber] = useState(undefined)
+
+
+  // useEffect(() => {
+    
+  //   postReservation(newResy)
+  //   clearForm()
+  // }, [])
 
   const submitResy = event => {
     event.preventDefault()
@@ -23,7 +31,7 @@ export default function ResyForm({addResy}) {
     setName('')
     setDate('')
     setTime('')
-    setNumber(null)
+    setNumber(undefined)
   }
 
   return (
