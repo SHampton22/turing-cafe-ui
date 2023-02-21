@@ -52,7 +52,7 @@ export default function ResyForm({addResy}) {
         value={number}
         onChange={(event) => setNumber(event.target.value)}
       />
-      <button onClick={event => submitResy(event)}>Make Reservation</button>
+      <button className='submit-button' onClick={event => submitResy(event)}>Make Reservation</button>
     </form>
   )
 }
